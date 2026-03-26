@@ -5,36 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <section>
         <div class="form-container">
             <div class="form-side">
                 <div class="form-header">
-                    <img src="/img/numi-9.png" alt="Logo" class="logo" width="300px">
+                    <img src="img/numi-9.png" alt="Logo" class="logo" width="300px">
                 </div>            
             </div>
             
             <div class="form-content">
-                <form action="/submit" method="post">
-                    <h3>Sign-Up</h3><br>
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="Jon" required><br><br>
+                <div id="error-box"></div>
+                <!-- Removed the action ="submit" method = "post" so it will not submit without backend -->
+                <form id="myForm">
+                    <h3>Sign-Up</h3>
 
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Doe" required><br><br>
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Jon" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                    </div>
                     
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="qwerty@gmail.com" required><br><br>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="qwerty@gmail.com" required>
+                    </div>
 
-                    <label for="Phone">Phone number:</label>
-                    <input type="tel" id="Phone" name="Phone" placeholder="080123456789" required><br><br>
+                    <div class="form-group">
+                        <label for="Phone">Phone number:</label>
+                        <input type="tel" id="Phone" name="Phone" placeholder="080123456789" required>
+                    </div>
 
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required><br><br>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
                     
-                    <label for="confirm-password">Confirm Password:</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
                     
                     <button type="submit">Submit</button>
                 </form>
