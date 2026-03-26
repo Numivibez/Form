@@ -36,6 +36,7 @@ function forms(event){
     const fname = document.getElementById("fname");
     const lname = document.getElementById("lname");
     const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
     const password = document.getElementById("password");
     const confirmPassword = document.getElementById("confirm-password");
 
@@ -43,6 +44,11 @@ function forms(event){
         alert("Input Your Name")
         return;
     }
+
+    if (phone.value.trim() !== NaN){
+        alert("Enter a Valid Phone Number");
+        return;
+    };
 
     if (!email.value.includes("@") || !email.value.includes(".")){
         alert("This is not a valid email");
